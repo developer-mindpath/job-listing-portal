@@ -5,6 +5,8 @@ import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
 import DOMPurify from "dompurify";
 import { JSX } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 import { IJobData } from "@/app/page";
 
@@ -26,20 +28,22 @@ export const JobDetailsModal=({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="p-6 border rounded-lg shadow-lg bg-white  relative">
-        <p className="text-center">Job details</p>
-        <div className="overflow-y-auto w-[700px] h-[500px] ">
-        <h1 className="text-2xl font-bold mb-2">{job.title}</h1>
-        <h2 className="text-lg ">
+      <div className="p-4 sm:p-6 border rounded-lg shadow-lg bg-white  relative m-2">
+        <p className="text-center text-lg font-bold mb-2">Job Details</p>
+        <div className="overflow-y-auto w-auto sm:w-[700px] h-auto sm:h-[500px] ">
+        <h1 className="text-base mb-1">
+        <strong>Job title :-</strong>
+          {job?.title}</h1>
+        <h2 className="text-base mb-1">
           <strong>Company Name :-</strong>
-          {job.company_name}
+          {job?.company_name}
         </h2>
-        <p className="">
+        <p className="mb-1 text-base">
           <strong>Location :-</strong>
-          {job.location}
+          {job?.location}
         </p>
         <div>
-          <p>
+          <p >
             <strong>Descripation</strong>
           </p>
           <div className="h-[300px] overflow-y-auto">
@@ -48,18 +52,18 @@ export const JobDetailsModal=({
           </ReactMarkdown>
           </div>
         </div>
-        <a
+        <Link
           href={job.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block text-blue-500 "
+          className="mt-4 inline-block text-blue-500 text-sm"
         >
           View Job Posting
-        </a>
+        </Link>
 
         </div>
         <div  className="absolute top-4 right-6 cursor-pointer" onClick={onClose}>
-          x
+        <Image width="20" height="20" src="https://img.icons8.com/emoji/48/cross-mark-emoji.png" alt="cross-mark-emoji"/>
         </div>
 
       </div>

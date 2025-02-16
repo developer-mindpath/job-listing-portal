@@ -7,6 +7,7 @@ import { timeAgo } from "@/utils";
 
 import JobDetailsModal from "./jobDetailModal";
 import { IJobData } from "@/app/page";
+import Image from "next/image";
 
 interface IJobCardProps {
   job: IJobData;
@@ -25,7 +26,7 @@ export const JobCard = ({ job }: IJobCardProps): JSX.Element => {
       <div className="flex justify-between items-center ">
         <div className="sm:w-1/2">
           <div className="flex items-center ">
-            <img
+            <Image
               width="20"
               className="mr-2"
               height="20"
@@ -35,7 +36,7 @@ export const JobCard = ({ job }: IJobCardProps): JSX.Element => {
             <h2 className="text-sm font-semibold">{job.title}</h2>
           </div>
           <div className="flex items-center ">
-            <img
+            <Image
               width="20"
               height="20"
               className="mr-2"
@@ -70,7 +71,7 @@ export const JobCard = ({ job }: IJobCardProps): JSX.Element => {
           </div>
           <div className="text-sm flex justify-between items-center">
             <div className="flex items-center ">
-              <img
+              <Image
                 width="20"
                 height="20"
                 src="https://img.icons8.com/color/48/map-marker--v1.png"
@@ -107,7 +108,7 @@ export const JobCard = ({ job }: IJobCardProps): JSX.Element => {
         </div>
         <div className="text-sm flex justify-between items-center">
           <div className="flex items-center ">
-            <img
+            <Image
               width="20"
               height="20"
               src="https://img.icons8.com/color/48/map-marker--v1.png"
