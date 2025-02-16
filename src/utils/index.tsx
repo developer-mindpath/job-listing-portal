@@ -1,5 +1,4 @@
 export function timeAgo(timestamp:number) {
-    console.log(timestamp)
     const seconds = Math.floor(Date.now() / 1000) - timestamp;
     
     const intervals = [
@@ -12,7 +11,6 @@ export function timeAgo(timestamp:number) {
   
     for (const interval of intervals) {
       const count = Math.floor(seconds / interval.seconds);
-    console.log(count)
 
       if (count >= 1) {
         return `${count}${interval.label}`;
