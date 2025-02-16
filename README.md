@@ -3,13 +3,18 @@
 ## Description
 Job Listing Portal is a Next.js-based web application that allows users to browse job listings efficiently. It is built with modern web technologies, ensuring a seamless user experience with fast performance.
 
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Package Manager:** pnpm
+- **Node.js Version:** 22
+- **pnpm Version:** 10.4.0
+
 ## Technologies Used
 - **Framework:** Next.js (App Router)
 - **Styling:** Tailwind CSS
 - **Language:** TypeScript
-- **Package Manager:** pnpm
-- **Node.js Version:** 22
-- **pnpm Version:** 10.4.0
 
 ## Getting Started
 
@@ -17,7 +22,7 @@ Job Listing Portal is a Next.js-based web application that allows users to brows
 To get started, clone this repository using the following command:
 
 ```sh
-git clone <your-repo-url>
+git clone <https://github.com/developer-mindpath/job-listing-portal.git>
 ```
 
 ```bash
@@ -28,8 +33,11 @@ cd job-listing-portal
 pnpm install
 ```
 
-Add env var in .env file
+### Add env var in .env file
+
+```
 NEXT_PUBLIC_API_URL=<your-api-url>
+```
 
 First, run the development server:
 
@@ -44,7 +52,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **`pnpm dev`**: Start the development server.  
 - **`pnpm build`**: Build the project for production.  
 - **`pnpm start`**: Start the production server.  
-
 
 
 ## Project Structure
@@ -70,4 +77,4 @@ job-listing-portal/
 
 ## Deploy on Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check check :- [job listig portal website](https://job-listing-portal-nine.vercel.app) 

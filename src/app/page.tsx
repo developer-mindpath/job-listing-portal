@@ -52,7 +52,7 @@ export default  async function Home(): Promise<JSX.Element> {
     const jobData = await fetchJobs();
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 text-center">Job Listings</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Job Listing Portal</h1>
       <JobData jobData={jobData}/>
     </div>
   );
